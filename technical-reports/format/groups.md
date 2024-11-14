@@ -79,8 +79,10 @@ Group keys without a dollar sign (`$`) prefix denote:
     "Group of tokens": {
       "$description": "This is an example of a group containing a single token",
       "Token name": {
-        "$value": "#000000",
-        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "channels": [0, 0, 0]
+        }
       }
     }
   }
@@ -95,11 +97,11 @@ Group keys without a dollar sign (`$`) prefix denote:
       "Subgroup of tokens": {
         "Token 1 name": {
           "$value": "#aabbcc",
-          "$type": "color",
+          "$type": "color"
         },
         "Token 2 name": {
           "$value": "#ddeeff",
-          "$type": "color",
+          "$type": "color"
         }
       }
     }
@@ -127,7 +129,7 @@ For example:
         "$type": "color"
       },
       "hot pink": {
-        "$value": "#dd22cc",
+        "$value": "#ff00ff",
         "$type": "color"
       }
     }
@@ -162,7 +164,7 @@ For example:
         "$value": "#00ff66"
       },
       "hot pink": {
-        "$value": "#dd22cc"
+        "$value": "#ff00ff"
       }
     }
   }
@@ -199,7 +201,7 @@ Note that, since a group's `$extensions` only relate to that group, they do not 
         "$type": "color"
       },
       "hot pink": {
-        "$value": "#dd22cc",
+        "$value": "#ff00ff",
         "$type": "color"
       }
     }
@@ -230,7 +232,7 @@ For example:
         "$value": "#00ff66"
       },
       "hot pink": {
-        "$value": "#dd22cc"
+        "$value": "#ff00ff"
       }
     },
     "typeface": {
@@ -259,7 +261,7 @@ For example:
     "$type": "color"
   },
   "brand-color-hot-pink": {
-    "$value": "#dd22cc",
+    "$value": "#ff00ff",
     "$type": "color"
   },
   "brand-typeface-primary": {
@@ -301,7 +303,7 @@ For example, a [=translation tool=] like [Style Dictionary](https://amzn.github.
         "$value": "#00ff66"
       },
       "hot pink": {
-        "$value": "#dd22cc"
+        "$value": "#ff00ff"
       }
     },
     "typeface": {
@@ -325,7 +327,7 @@ For example, a [=translation tool=] like [Style Dictionary](https://amzn.github.
 
 ```scss
 $brand-color-acid-green: #00ff66;
-$brand-color-hot-pink: #dd22cc;
+$brand-color-hot-pink: #ff00ff;
 $brand-typeface-primary: 'Comic Sans MS';
 $brand-typeface-secondary: 'Times New Roman';
 ```
